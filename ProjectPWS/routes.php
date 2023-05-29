@@ -1,9 +1,9 @@
 <?php
-require_once 'controllers/AuthController.php';
-require_once 'controllers/PlanoController.php';
-require_once 'controllers/HomeController.php';
-require_once 'controllers/BookController.php';
-require_once 'controllers/ChapterController.php';
+// require_once 'controllers/AuthController.php';
+// require_once 'controllers/PlanoController.php';
+// require_once 'controllers/HomeController.php';
+// require_once 'controllers/BookController.php';
+// require_once 'controllers/ChapterController.php';
 
 return [
     'defaultRoute' => ['GET', 'HomeController', 'index'],
