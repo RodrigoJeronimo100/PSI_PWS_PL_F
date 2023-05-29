@@ -1,4 +1,5 @@
 <?php
+
 // require_once 'controllers/AuthController.php';
 // require_once 'controllers/PlanoController.php';
 // require_once 'controllers/HomeController.php';
@@ -33,3 +34,6 @@ return [
 
 ]
 ];
+
+
+?>
