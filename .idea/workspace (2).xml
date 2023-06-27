@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c3d54df-8ea8-4e7f-99e8-69a1fcae22a0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/assets" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/docs" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/examples" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/lib" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/output" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/test" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/php-activerecord" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2NIFQtd1BC6RHhdG9i9DPdCRwhO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/wamp64/www/fichas/creditapplication",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\fichas\creditapplication\public\css" />
+      <recent name="C:\wamp64\www\creditapp\views\plano" />
+      <recent name="C:\wamp64\www\creditapp\views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c3d54df-8ea8-4e7f-99e8-69a1fcae22a0" name="Changes" comment="" />
+      <created>1679343676211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679343676211</updated>
+      <workItem from="1679343677405" duration="809000" />
+      <workItem from="1679935557141" duration="11381000" />
+      <workItem from="1681750104923" duration="3296000" />
+      <workItem from="1682082563804" duration="3156000" />
+      <workItem from="1682085781210" duration="3648000" />
+      <workItem from="1682364384976" duration="1763000" />
+      <workItem from="1683306965409" duration="9274000" />
+      <workItem from="1683566466234" duration="8072000" />
+      <workItem from="1684170750805" duration="9373000" />
+      <workItem from="1685129396091" duration="4319000" />
+      <workItem from="1685134223275" duration="905000" />
+      <workItem from="1685135202379" duration="135000" />
+      <workItem from="1685379851007" duration="319000" />
+      <workItem from="1685381460531" duration="429000" />
+      <workItem from="1685382453579" duration="7046000" />
+      <workItem from="1685396238608" duration="992000" />
+      <workItem from="1685983668300" duration="258000" />
+      <workItem from="1685984303837" duration="242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
