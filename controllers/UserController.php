@@ -1,11 +1,12 @@
 <?php
 require_once 'Controller.php';
 require_once 'models/User.php';
+
 class UserController extends Controller
 {
     public function __construct()
     {
-        $this->authorizationFilter(['user', 'funcionario','admin']);
+        $this->authorizationFilter(['funcionario','admin']);
     }
     public function index()
     {
@@ -16,64 +17,101 @@ class UserController extends Controller
         //mostrar a vista index passando os dados por parâmetro
     }
 
-    public function show($username)
+    public function show($id)
     {
-        $user = user::find($username);
-        if (is_null($user)) {
+        $users = user::find($id);
+        if (is_null($users)) {
             //TODO redirect to standard error page
         } else {
             //mostrar a vista show passando os dados por parâmetro
-            $this->renderView('user','show', ['user'=>$user]);
+            $this->renderView('user','show', ['users'=>$users]);
         }
     }
     public function create()
     {
-        //    $genres = Genre::all();
-        //    $this->renderView('book','create', ['genres'=>$genres]);
+        $this->renderView('user','create', ['usertype'=>3]);
+        //mostrar a vista create
+    }
+    public function createfunc()
+    {
+        $this->renderView('user','create', ['usertype'=>2]);
         //mostrar a vista create
     }
 
     public function store()
     {
-       // $genres = Genre::all();
-        $user = new user($this->getHTTPPost());
+        $users = new user($this->getHTTPPost());
 
-        if($user->is_valid()){
-            $user->save();
+        if($users->is_valid()){
+            $users->save();
             //redirecionar para o index
             $this->redirectToRoute('user','index');
         } else {
-            $this->renderView('user','create', ['user'=>$user] );
+            $this->renderView('user','create', ['users'=>$users] );
             //mostrar vista create passando o modelo como parâmetro
         }
     }
-    public function edit($username)
+    public function edit($id)
     {
-       // $genres = Genre::all();
-        $user = user::find($username);
-        if (is_null($user)) {
+        $users = user::find($id);
+        if (is_null($users)) {
             //TODO redirect to standard error page
         } else {
-            $this->renderView('user', 'edit', ['user'=>$user]);
+            $this->renderView('user', 'edit', ['users'=>$users]);
             //mostrar a vista edit passando os dados por parâmetro
         }
     }
-    public function update($username)
+    public function editPassword($id)
     {
-        $user = user::find($username);
-        $user->update_attributes($this-> getHTTPPost());
-        if($user->is_valid()){
-            $user->save();
+        $users = user::find($id);
+        if (is_null($users)) {
+            //TODO redirect to standard error page
+        } else {
+            $this->renderView('funcionario', 'editPassword', ['users'=>$users]);
+            //mostrar a vista edit passando os dados por parâmetro
+        }
+    }
+    public function editEmail($id)
+    {
+        $users = user::find($id);
+        if (is_null($users)) {
+            //TODO redirect to standard error page
+        } else {
+            $this->renderView('funcionario', 'editEmail', ['users'=>$users]);
+            //mostrar a vista edit passando os dados por parâmetro
+        }
+    }
+    public function update($id)
+    {
+        $users = user::find($id);
+        $users->update_attributes($this-> getHTTPPost());
+        if($users->is_valid()){
+            $users->save();
             $this->redirectToRoute('user','index');
             //redirecionar para o index
         } else {
-            $this->renderView('user', 'edit', ['book'=>$user]);
+            $this->renderView('user', 'edit', ['users'=>$users]);
             //mostrar vista edit passando o modelo como parâmetro
         }
     }
-    public function delete($username)
+    public function updateDados($id)
     {
-        $user = user::find($username);
+        $users = user::find($id);
+        $users->update_attributes($this-> getHTTPPost());
+        if($users->is_valid()){
+            $users->save();
+            $this->redirectToRoute('funcionario','index');
+            //redirecionar para o index
+        } else {
+            $this->renderView('user', 'edit', ['users'=>$users]);
+            //mostrar vista edit passando o modelo como parâmetro
+        }
+    }
+
+
+    public function delete($id)
+    {
+        $user = user::find($id);
         $user->delete();
         //redirecionar para o index
         $this->redirectToRoute('user','index');

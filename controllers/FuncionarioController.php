@@ -10,9 +10,8 @@ class FuncionarioController extends Controller
     }
     public function index()
     {
-        $empresa = empresa::all();
-        $book = book::all();
-        $this->renderView('funcionario','index', ['empresa'=>$empresa, 'book'=>$book] );
+        $empresa = empresa::first();
+        $this->renderView('funcionario','index', ['empresa'=>$empresa] );
 
         //mostrar a vista index passando os dados por parâmetro
     }
@@ -42,7 +41,7 @@ class FuncionarioController extends Controller
         if($empresa->is_valid()){
             $empresa->save();
             //redirecionar para o index
-            $this->redirectToRoute('empresa','index');
+            $this->render('empresa','index');
         } else {
             $this->renderView('empresa','create', ['empresa'=>$empresa] );
             //mostrar vista create passando o modelo como parâmetro

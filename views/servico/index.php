@@ -5,7 +5,7 @@
 <h2 class="top-space"></h2>
 <div class="row">
     <div class="col-sm-12">
-        <table class="table tablestriped"><thead><th><h3>Id</h3></th><th><h3>Referência</h3></th><th><h3>Descrição</h3></th><th><h3>Preço/Hora</h3></th><th><h3>Percentagem de Iva(%)</h3></th>
+        <table class="table tablestriped"><thead><th><h3>Id</h3></th><th><h3>Referência</h3></th><th><h3>Descrição</h3></th><th><h3>Preço/Hora(€)</h3></th><th><h3>Percentagem de Iva(%)</h3></th>
             <th><h3>Descrição de Iva</h3></th></thead>
             <tbody>
             <?php foreach ($servico as $servico) {?>

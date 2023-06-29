@@ -9,16 +9,16 @@ class EmpresaController extends Controller
     }
     public function index()
     {
-        $empresa = empresa::all();
+        $empresa = empresa::first();
 
         $this->renderView('empresa','index', ['empresa'=>$empresa]);
 
         //mostrar a vista index passando os dados por parâmetro
     }
 
-    public function show($empresaname)
+    public function show($id)
     {
-        $empresa = empresa::find($empresaname);
+        $empresa = empresa::find($id);
         if (is_null($empresa)) {
             //TODO redirect to standard error page
         } else {
@@ -47,10 +47,9 @@ class EmpresaController extends Controller
             //mostrar vista create passando o modelo como parâmetro
         }
     }
-    public function edit($empresaname)
+    public function edit($id)
     {
-        // $genres = Genre::all();
-        $empresa = empresa::find($empresaname);
+        $empresa = empresa::find($id);
         if (is_null($empresa)) {
             //TODO redirect to standard error page
         } else {
@@ -58,22 +57,22 @@ class EmpresaController extends Controller
             //mostrar a vista edit passando os dados por parâmetro
         }
     }
-    public function update($empresaname)
+    public function update($id)
     {
-        $empresa = empresa::find($empresaname);
+        $empresa = empresa::find($id);
         $empresa->update_attributes($this-> getHTTPPost());
         if($empresa->is_valid()){
             $empresa->save();
-            $this->redirectToRoute('empresa','index');
+            $this->redirectToRoute('funcionario','index');
             //redirecionar para o index
         } else {
-            $this->renderView('empresa', 'edit', ['book'=>$empresa]);
+            $this->renderView('empresa', 'edit', ['empresa'=>$empresa]);
             //mostrar vista edit passando o modelo como parâmetro
         }
     }
-    public function delete($empresaname)
+    public function delete($id)
     {
-        $empresa = empresa::find($empresaname);
+        $empresa = empresa::find($id);
         $empresa->delete();
         //redirecionar para o index
         $this->redirectToRoute('empresa','index');

@@ -17,7 +17,7 @@ class Auth
         } else {
             if ($user->password==$senha){
             //mostrar a vista show passando os dados por parâmetro
-                $_SESSION['utilizador']= $utilizador;
+                $_SESSION['utilizador']= $user;
                 $_SESSION['role']= $user->role;
                 return true;
             }

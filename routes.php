@@ -1,13 +1,14 @@
 <?php
 require_once 'controllers/AuthController.php';
 require_once 'controllers/HomeController.php';
-require_once 'controllers/BookController.php';
-require_once 'controllers/ChapterController.php';
 require_once 'controllers/EmpresaController.php';
 require_once 'controllers/FuncionarioController.php';
-require_once 'controllers/ClienteController.php';
+require_once 'controllers/UserController.php';
 require_once 'controllers/IvaController.php';
 require_once 'controllers/ServicoController.php';
+require_once 'controllers/FolhaObraController.php';
+require_once 'controllers/LinhaObraController.php';
+
 
 return [
     'defaultRoute' => ['GET', 'HomeController', 'index'],
@@ -19,22 +20,25 @@ return [
     'funcionario'=>[
         'index'=> ['GET','FuncionarioController','index'],
         'create' => ['GET', 'FuncionarioController', 'create'],
-        'show' => ['POST','FuncionarioController','show']
+        'show' => ['POST','FuncionarioController','show'],
+        'editEmail'=> ['GET','UserController','editEmail'],
+        'editPassword'=> ['GET','UserController','editPassword']
     ],
 
     'user'=>[
+        'index'=> ['GET','UserController','index'],
+        'show'=> ['GET','UserController','show'],
+        'edit'=> ['GET','UserController','edit'],
+        'update'=> ['POST','UserController','update'],
+        'store'=> ['POST','UserController','store'],
+        'create'=> ['GET','UserController','create'],
+        'createfunc'=> ['GET', 'UserController','createfunc'],
+        'delete'=> ['GET','UserController','delete'],
+        'updateDados'=> ['POST','UserController','updateDados'],
 
-        'index'=> ['GET','ClienteController','index'],
-        'show'=> ['GET','ClienteController','show'],
-        'edit'=> ['GET','ClienteController','edit'],
-        'update'=> ['POST','ClienteController','update'],
-        'store'=> ['POST','ClienteController','store'],
-        'create'=> ['GET','ClienteController','create'],
-        'createfunc'=> ['GET', 'ClienteController','createfunc']
     ],
 
     'iva'=>[
-
         'index'=> ['GET','IvaController','index'],
         'show'=> ['GET','IvaController','show'],
         'edit'=> ['GET','IvaController','edit'],
@@ -55,15 +59,24 @@ return [
         'delete'=> ['GET','ServicoController','delete']
     ],
 
-    'book'=>[
-        'index'=> ['GET', 'BookController', 'index'],
-        'show' => ['GET', 'BookController', 'show'],
-        'create' => ['GET', 'BookController', 'create'],
-        'store' => ['POST', 'BookController', 'store'],
-        'edit' => ['GET', 'BookController', 'edit'],
-        'update' => ['POST', 'BookController', 'update'],
-        'delete' => ['GET', 'BookController', 'delete'],
+    'folhaobra'=>[
+        'index'=> ['GET','FolhaObraController','index'],
+        'show'=> ['GET','FolhaObraController','show'],
+        'edit'=> ['GET','FolhaObraController','edit'],
+        'update'=> ['POST','FolhaObraController','update'],
+        'store'=> ['POST','FolhaObraController','store'],
+        'create'=> ['GET','FolhaObraController','create'],
+        'emit'=> ['GET','FolhaObraController','emit'],
+        'delete'=> ['GET','FolhaObraController','delete']
     ],
+
+    'linhaobra'=>[
+        'index'=> ['GET','LinhaObraController','index'],
+        'index_id'=> ['GET','LinhaObraController','index_id'],
+        'store'=> ['POST','LinhaObraController','store'],
+        'create'=> ['GET','LinhaObraController','create'],
+    ],
+
     'empresa'=>[
         'index'=> ['GET', 'EmpresaController', 'index'],
         'show' => ['GET', 'EmpresaController', 'show'],
@@ -73,11 +86,5 @@ return [
         'update' => ['POST', 'EmpresaController', 'update'],
         'delete' => ['GET', 'EmpresaController', 'delete'],
     ],
-    'chapter'=> [
-        'index' => ['GET', 'ChapterController', 'index'],
-        'create' => ['GET', 'ChapterController', 'create'],
-        'store' => ['POST', 'ChapterController', 'store'],
-        'edit' => ['GET', 'ChapterController', 'edit'],
 
-]
 ];
